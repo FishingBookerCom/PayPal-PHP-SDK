@@ -37,7 +37,7 @@ class PayPalLoggingManager
      * @param string $loggerName
      * @return $this
      */
-    public static function getInstance($loggerName = __CLASS__)
+    public static function getInstance($loggerName = self::class)
     {
         if (array_key_exists($loggerName, PayPalLoggingManager::$instances)) {
             return PayPalLoggingManager::$instances[$loggerName];

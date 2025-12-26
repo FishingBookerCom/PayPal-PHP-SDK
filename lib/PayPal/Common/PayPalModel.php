@@ -9,7 +9,7 @@ use PayPal\Validation\JsonValidator;
  * Stores all member data in a Hashmap that enables easy
  * JSON encoding/decoding
  */
-class PayPalModel
+class PayPalModel implements \Stringable
 {
 
     private $_propMap = array();
@@ -302,7 +302,7 @@ class PayPalModel
      *
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         return $this->toJSON(128);
     }

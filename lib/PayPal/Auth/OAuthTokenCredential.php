@@ -282,7 +282,7 @@ class OAuthTokenCredential extends PayPalResourceModel
         if ($response == null || !isset($response["access_token"]) || !isset($response["expires_in"])) {
             $this->accessToken = null;
             $this->tokenExpiresIn = null;
-            PayPalLoggingManager::getInstance(__CLASS__)->warning("Could not generate new Access token. Invalid response from server: ");
+            PayPalLoggingManager::getInstance(self::class)->warning("Could not generate new Access token. Invalid response from server: ");
             throw new PayPalConnectionException(null, "Could not generate new Access token. Invalid response from server: ");
         } else {
             $this->accessToken = $response["access_token"];

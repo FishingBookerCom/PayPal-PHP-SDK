@@ -45,7 +45,7 @@ return static function (RectorConfig $rectorConfig): void {
 
     // define sets of rules
     $rectorConfig->sets([
-        LevelSetList::UP_TO_PHP_80
+        LevelSetList::UP_TO_PHP_84
     ]);
 
     $rectorConfig->skip([
@@ -54,9 +54,6 @@ return static function (RectorConfig $rectorConfig): void {
         MultiExceptionCatchRector::class,
         ChangeSwitchToMatchRector::class,
         LongArrayToShortArrayRector::class,
-        ArraySpreadInsteadOfArrayMergeRector::class,
-        AddDefaultValueForUndefinedVariableRector::class,
-        CountOnNullRector::class,
         JsonThrowOnErrorRector::class,
         ClosureToArrowFunctionRector::class,
         StrContainsRector::class,
@@ -65,7 +62,6 @@ return static function (RectorConfig $rectorConfig): void {
         PublicConstantVisibilityRector::class,
         TypedPropertyFromAssignsRector::class,
         RandomFunctionRector::class,
-        UnionTypesRector::class,
         MixedTypeRector::class,
         TernaryToNullCoalescingRector::class,
         TernaryToElvisRector::class,
