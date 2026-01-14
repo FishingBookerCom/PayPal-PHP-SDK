@@ -37,7 +37,7 @@ class PayPalConfigManager
             $configFile = constant('PP_CONFIG_PATH') . '/sdk_config.ini';
         } else {
             $configFile = implode(DIRECTORY_SEPARATOR,
-                array(dirname(__FILE__), "..", "config", "sdk_config.ini"));
+                array(__DIR__, "..", "config", "sdk_config.ini"));
         }
         if (file_exists($configFile)) {
             $this->addConfigFromIni($configFile);

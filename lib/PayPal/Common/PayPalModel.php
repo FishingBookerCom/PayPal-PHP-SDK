@@ -3,13 +3,14 @@
 namespace PayPal\Common;
 
 use PayPal\Validation\JsonValidator;
+use Stringable;
 
 /**
  * Generic Model class that all API domain classes extend
  * Stores all member data in a Hashmap that enables easy
  * JSON encoding/decoding
  */
-class PayPalModel
+class PayPalModel implements Stringable
 {
 
     private $_propMap = array();
@@ -302,7 +303,7 @@ class PayPalModel
      *
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         return $this->toJSON(128);
     }

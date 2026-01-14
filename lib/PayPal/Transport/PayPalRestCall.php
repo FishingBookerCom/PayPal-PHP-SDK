@@ -38,7 +38,7 @@ class PayPalRestCall
     public function __construct(ApiContext $apiContext)
     {
         $this->apiContext = $apiContext;
-        $this->logger = PayPalLoggingManager::getInstance(__CLASS__);
+        $this->logger = PayPalLoggingManager::getInstance(self::class);
     }
 
     /**
